@@ -10,7 +10,7 @@ agent = Mechanize.new
 page = agent.get("https://www.a1tourism.com/uk/guernsey.html")
 #
 # # Find somehing on the page using css selectors
-p page.at('div.content')
+p page.at('class.boxtext1')
 #
 # # Write out to the sqlite database using scraperwiki library
 ScraperWiki.save_sqlite(["name"], {"name" => "susan", "occupation" => "software developer"})
