@@ -7,8 +7,3 @@ agent = Mechanize.new
 page = agent.get("http://www.premiereclasse.fr")
 
 links = page.search("mailto:")
-
-
-links.each do |link|
-  ScraperWiki.save_sqlite(link)
-end
