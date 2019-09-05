@@ -6,4 +6,4 @@ require 'scraperwiki'
 agent = Mechanize.new
 page = agent.get("http://www.premiereclasse.fr")
 
-links = page.search("mailto:")
+links = page.at("mailto:")
