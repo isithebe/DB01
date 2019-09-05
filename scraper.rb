@@ -4,9 +4,9 @@ require 'date'
 require 'scraperwiki'
 
 agent = Mechanize.new
-page = agent.get("http://pitchfork.com/reviews/albums/")
+page = agent.get("http://www.premiereclasse.fr")
 
-review_links = page.links_with(href: %r{^/reviews/albums/\w+})
+review_links = page.links
 
 review_links = review_links.drop(1).reject do |link|
   parent_classes = link.node.parent['class'].split
