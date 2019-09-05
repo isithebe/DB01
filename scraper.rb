@@ -5,7 +5,7 @@ require 'scraperwiki'
 agent = Mechanize.new
 page = agent.get("http://www.premiereclasse.fr")
 
-links = page.at("mailto:")
+links = page.at('mail')
 
 links.each do |li|
   member = {
