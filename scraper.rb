@@ -6,8 +6,7 @@ agent = Mechanize.new
 page = agent.get("http://www.premiereclasse.fr")
 
 links = page.at('mail')
-
-links.each do |li|
+page.at('mail').each do |li|
   member = {
     em: li.at('@')
 #    title: li.at('.title').inner_text.strip,
